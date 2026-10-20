@@ -37,8 +37,8 @@ swift run dev-sentry scan --dry-run
 ---
 
 ## 📚 Documentation Pillars
-- [PRD.md](PRD.md) — Product specifications and acceptance criteria
-- [ARCHITECTURE.md](ARCHITECTURE.md) — Storage scanning engines and APFS taxonomy
+- [PRD.md](docs/PRD.md) — Product specifications and acceptance criteria
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — Storage scanning engines and APFS taxonomy
 - [AGENTS.md](AGENTS.md) — Operational instructions for AI coding assistants
-- [TESTING.md](TESTING.md) — Test strategies and mock directory sandboxes
-- [SECURITY.md](SECURITY.md) — Fail-safe system boundaries and immunity rules
+- [TESTING.md](docs/TESTING.md) — Test strategies and mock directory sandboxes
+- [SECURITY.md](docs/SECURITY.md) — Fail-safe system boundaries and immunity rules
