@@ -47,7 +47,11 @@ public final class ImmunityManager: Sendable {
         }
 
         // Also ensure user home directory itself is never deleted
+        #if os(macOS)
         let home = (FileManager.default.homeDirectoryForCurrentUser.path as NSString).standardizingPath
+        #else
+        let home = (NSHomeDirectory() as NSString).standardizingPath
+        #endif
         if normalized == home {
             throw SecurityViolationError.protectedSystemPath(normalized)
         }

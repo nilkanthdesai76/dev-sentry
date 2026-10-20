@@ -33,7 +33,11 @@ public enum StorageCategory: String, CaseIterable, Sendable, Codable {
     }
 
     public var defaultPath: String? {
+        #if os(macOS)
         let home = FileManager.default.homeDirectoryForCurrentUser.path
+        #else
+        let home = NSHomeDirectory()
+        #endif
         switch self {
         case .xcodeDerivedData:
             return "\(home)/Library/Developer/Xcode/DerivedData"
